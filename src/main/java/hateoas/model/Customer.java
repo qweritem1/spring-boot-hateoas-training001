@@ -2,11 +2,13 @@ package hateoas.model;
 
 import org.springframework.hateoas.ResourceSupport;
 
+import java.util.Map;
+
 public class Customer extends ResourceSupport {
     private String customerId;
     private String customerName;
     private String companyName;
-    private String orders;
+    private Map<String, Order> orders;
 
     public Customer() {
         super();
@@ -43,11 +45,11 @@ public class Customer extends ResourceSupport {
         this.companyName = companyName;
     }
 
-    public String getOrders() {
+    public Map<String, Order> getOrders() {
         return orders;
     }
 
-    public void setOrders(String orders) {
+    public void setOrders(Map<String, Order> orders) {
         this.orders = orders;
     }
 
