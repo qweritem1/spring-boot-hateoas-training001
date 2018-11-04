@@ -19,14 +19,12 @@ import java.util.List;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.methodOn;
 
-@RestController 
+@RestController
 @RequestMapping(value = "/customers")
 @EnableHypermediaSupport(type=HypermediaType.HAL)
 public class CustomerController {
-    @Autowired
-    CustomerService customerService;
-    @Autowired
-    OrderService orderService;
+    @Autowired  CustomerService customerService;
+    @Autowired  OrderService orderService;
 
     @RequestMapping(value = "/{customerId}", method = RequestMethod.GET)
     public Customer getCustomerById(@PathVariable final String customerId) {
