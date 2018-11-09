@@ -33,7 +33,7 @@ dependencies {
 
 task print() {
     doLast {
-        println "github push complete!!!! -> aws"
+        println "github push complete!!!! -> aws test2"
     }
 
 }
